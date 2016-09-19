@@ -72,14 +72,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fMC-39-goa">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="weatherCell" rowHeight="80" id="se0-I6-MGo">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="weatherCell" rowHeight="80" id="se0-I6-MGo" customClass="WeatherCell" customModule="Weatherapp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="se0-I6-MGo" id="Mo8-BO-mJy">
                                             <frame key="frameInset" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BX4-Dl-EFC">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BX4-Dl-EFC">
                                                     <frame key="frameInset" minX="16" minY="18.5" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="2h5-9x-QgI"/>
@@ -93,13 +93,13 @@
                                                             <frame key="frameInset" width="142" height="51"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Wednesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyH-za-1Ft">
-                                                                    <frame key="frameInset" width="142" height="25"/>
+                                                                    <frame key="frameInset" width="142" height="28"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
                                                                     <color key="textColor" red="0.45214332460000001" green="0.45214332460000001" blue="0.45214332460000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cloudy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ev-SM-vXR">
-                                                                    <frame key="frameInset" minY="25" width="142" height="26"/>
+                                                                    <frame key="frameInset" minY="28" width="142" height="24"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                                     <color key="textColor" red="0.45214332460000001" green="0.45214332460000001" blue="0.45214332460000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -139,6 +139,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="LowTempLabel" destination="cex-O1-aj8" id="pRo-22-dLj"/>
+                                            <outlet property="dayLabel" destination="lyH-za-1Ft" id="i3F-rb-DkB"/>
+                                            <outlet property="highTempLabel" destination="Pgc-rm-eki" id="MH3-8a-hTi"/>
+                                            <outlet property="lowTempLabel" destination="cex-O1-aj8" id="3dA-zQ-dLb"/>
+                                            <outlet property="weatherIcon" destination="BX4-Dl-EFC" id="egx-yA-Tge"/>
+                                            <outlet property="weatherTypeLabel" destination="7Ev-SM-vXR" id="Rxv-sz-c3w"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
